@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root{
+   --clr-white: hs(0,0%)
+    --clr-light-gray: hsl(212,45%,89%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'1rem';
+    min-height: 100vh;
+    font-size: 1rem;
+    background-color: aqua
+    
+}
+
+
+main{
+    background-color: white;
+    width:90%;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0px 15px 20px -2px rgba(0, 0,0, 0);
+    -webkit-box-shadow: 0px 15px 20px -2px(0,0,0,0);
+    -moz-box-shadow: 0px 15px 20px -2px rgba(0,0,0, 0);
+   */
+
+}
+
+h1{
+    text-align: center;
+}
+
+
+
+img{
+   display: block ;
+   max-width: 100px;
+   border-radius: 50%;
+  height: 100px;
+       object-fit: cover;
+   position: relative;
+   box-shadow: 5px 0px 3px 2px aqua;
+   margin-left: auto;  
+   margin-right: auto;  
+   
+}
+
+
+.sbtn{
+    margin-top: 12px;
+    border-radius: 7px;
+ height: 10%;
+ border: 2px solid aqua;
+ color: aqua;
+}
+
+body,
+h2,
+h6{
+    margin: 0;
+}
