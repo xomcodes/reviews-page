@@ -13,7 +13,9 @@ body{
     font-family:'1rem';
     min-height: 100vh;
     font-size: 1rem;
-    background-color: aqua
+    background-color: aqua;
+    font-family: Roboto;
+    
     
 }
 
@@ -67,3 +69,4 @@ h2,
 h6{
     margin: 0;
 }
+
