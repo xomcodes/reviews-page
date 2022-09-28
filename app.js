@@ -1,7 +1,7 @@
 // Local data
 
 const reviews = [
-    {
+  {
     id: 1,
     name: "susan smith",
     job: "web developer",
@@ -29,25 +29,49 @@ const reviews = [
     img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
     text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
-
 ];
 
-
 // Variable declaration
-const img = document.getElementById('capture-pix');
-const name = document.getElementById('name');
-const job = document.getElementById('job');
-const info = document.getElementById('info');
+let img = document.getElementById("capture-img");
+let name = document.getElementById("name");
+let job = document.getElementById("job");
+let info = document.getElementById("info");
 
-
-const prevButton = document.querySelector('.prev-btn')
-const nextButton = document.querySelector('.next-btn')
-const randomButton = document.querySelector('.random-btn')
+let prevBtn = document.querySelector(".prev-btn");
+let nextBtn = document.querySelector(".next-btn");
+let randomBtn = document.querySelector(".random-btn");
 
 // declare current value
-const currentValue = 0;
+let currentValue = 0;
 
 
-    Window.eventListerner(DOMContentLoaded, function(){
+window.addEventListener("DOMContentLoaded", function () {
+doSomething(currentValue)
 
-    })
+});
+
+
+function doSomething(person){
+  let item = reviews[person]
+  img.src = item.img;
+  name.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+  
+}
+
+// show next person
+nextBtn.addEventListener('click', function (){
+currentValue++
+if(currentValue > reviews.length - 1){
+  currentValue = 0
+}
+doSomething(currentValue)
+
+})
+
+
+randomBtn.addEventListener('click', function(){
+  currentValue = Math.floor(Math.random() * reviews.length)
+})
+
